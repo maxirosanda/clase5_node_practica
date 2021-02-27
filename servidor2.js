@@ -5,9 +5,10 @@ console.log(`tu servidor esta listo ${this.address().port}`)
 })
 */
 var server = http.createServer((request,response)=>{
-    respuesta.end("hola")
+    response.end("hola")
     })
 
-    server.listen(8080,function(){
-        console.log(`tu servidor esta listo en ` + this.address().port)
+   const PORT = process.env.PORT || 3000
+   server.listen(PORT,function(){
+        console.log(`tu servidor esta listo en`)
     })
